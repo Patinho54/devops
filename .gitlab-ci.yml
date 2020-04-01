@@ -1,0 +1,17 @@
+image: node:latest
+
+cache:
+    paths:
+        - node_modules/
+    # fichiers en cache pour être sauvegardés et ne pas les télécharger à nouveau
+
+stages:
+    - test
+# processus qui vont être exécutés
+
+testing_testing:
+    stage: test
+    script:
+        - npm install
+        - npm test
+# commande pour installer les dépendances puis on lance la commande de test
